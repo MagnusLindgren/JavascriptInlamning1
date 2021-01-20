@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    background-image: url(../img/background.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: cornsilk;
+    min-width: 100%;
+}
+
+header {
+    background-color: black;
+    color: cornsilk;
+    position: fixed;
+    min-width: 100%;
+}
+
+.rowBox {
+    display: flex;
+    justify-content:space-evenly;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+}
+
+.textBox {
+    margin: 0.5in auto;    
+    max-width: 5in;
+    min-width: 3in;
+    max-height: 4in;
+    padding: 0.1in;
+    background-color: rgba(0, 0, 0, 0.877);
+    box-shadow: 5px 10px 8px #4d4d4db4;
+}
+
+footer {
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
