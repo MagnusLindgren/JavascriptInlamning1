@@ -14,13 +14,19 @@ body {
 header {
     background-color: black;
     color: cornsilk;
-    position: fixed;
+    position: -webkit-sticky; /* För safari */
+    position: sticky;
+    top: 0;
     min-width: 100%;
 }
 
 .rowBox {
     display: flex;
     justify-content:space-evenly;
+}
+
+.rowBox > div {
+    padding: 0.5em;
 }
 
 .col {
@@ -31,12 +37,12 @@ header {
 
 .textBox {
     margin: 0.5in auto;    
-    max-width: 5in;
+    max-width: 5.5in;
     min-width: 3in;
     max-height: 4in;
     padding: 0.1in;
     background-color: rgba(0, 0, 0, 0.877);
-    box-shadow: 5px 10px 8px #4d4d4db4;
+    box-shadow: 5px 10px 8px #272727b4;
 }
 
 footer {
