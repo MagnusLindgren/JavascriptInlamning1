@@ -36,13 +36,18 @@ header {
 }
 
 .textBox {
-    margin: 0.5in auto;    
-    max-width: 5.5in;
-    min-width: 3in;
-    max-height: 4in;
-    padding: 0.1in;
+    margin: 2em auto;    
+    max-width: 5em;
+    min-width: 25em;
+    max-height: 50em;
+    padding: 1em;
     background-color: rgba(0, 0, 0, 0.877);
     box-shadow: 5px 10px 8px #272727b4;
+    display: block;
+}
+
+.inputNr {
+    width: 30%;
 }
 
 footer {
