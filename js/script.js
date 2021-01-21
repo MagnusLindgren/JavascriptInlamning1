@@ -4,8 +4,11 @@
 // maxlängd för edits?
 
 window.onload = function(){
-    let editable = document.getElementById("edit");
-
+    document.getElementById("inputNumber").oninput = function(){
+        let inputNumber = parseInt(this.value);
+        console.log(inputNumber); // För test
+    }
+    
     makeEditable(edit);
 }
 
