@@ -7,11 +7,8 @@ window.onload = function(){
     document.getElementById("inputNumber").oninput = function(){
         let inputNumber = parseInt(this.value);
         removeBlogBox();
-        console.log(inputNumber); // För test
-        createBlogBox(inputNumber);
+        createBlogBox(inputNumber);       
     }
-    
-    makeEditable(edit);
 }
 
 //funktion för att göra ett element redigerbart
@@ -48,7 +45,10 @@ function createBlogBox(input){
     }
 }
 
+// Ta bort blogposter
 function removeBlogBox(){
-    let section = document.querySelectorAll("section");
-    section.remove();
+    let sections = document.querySelectorAll("section");
+    for (let i = 0; i < sections.length; i++){
+        sections[i].remove();
+    }   
 }
