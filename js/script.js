@@ -1,12 +1,15 @@
-// TODO
-// JSkod för sifferinputs fönstret
-// JSkod för blogginlägg
-// maxlängd för edits?
+/*  Vad jag gjort för att felsöka och undvika buggar
+    Jag har använt mig av console.log för att spåra och se till att mina variablar
+    får just det värde jag vill att det ska få. Jag har följt vad som händer i 
+    webbläsarens konsolfönster för att se att rätt värde sätts in i variabeln. 
+*/
 
 window.onload = function(){
     document.getElementById("inputNumber").oninput = function(){
         let inputNumber = parseInt(this.value);
+        // Ta bort alla poster
         removeBlogBox();
+        // Skapar nya poster enligt vilket värde som är angett i parametern
         createBlogBox(inputNumber);       
     }
 }
@@ -19,6 +22,7 @@ function makeEditable(box){
     }
 }
 
+// Funktion för att skapa bloggposter
 function createBlogBox(input){
     for (let i = 0; i < input; i++) {
         //Skapa alla element
@@ -27,21 +31,27 @@ function createBlogBox(input){
         let title = document.createElement("h4");
         let paragraph = document.createElement("p");
 
+        let button = document.createElement("button");
+
         //Skriv ut temp text i boxen
         title.innerText = "BlogPost " + (i+1);
         paragraph.innerText = "Write your text here.";
 
-        //Gör boxen editable
+        button.innerText = "Save";
+
+        //Gör boxen redigerbar
         makeEditable(title);
         makeEditable(paragraph);
 
         //Skapa allt på sidan
         section.append(title);
         section.append(paragraph);
+        section.append(button)
         main.append(section);
 
         // Lägg till CSS
         section.classList.add("textbox");
+        button.classList.add("button");
     }
 }
 
@@ -52,3 +62,5 @@ function removeBlogBox(){
         sections[i].remove();
     }   
 }
+
+// Testkod för att spara det man redigerat

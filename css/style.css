@@ -48,7 +48,23 @@ header {
 
 .inputNr {
     width: 30%;
+    float: right;
+    background-color: black;
+    color: cornsilk;
 }
+
+.button {
+    float: right;
+    background-color: black;
+    color: cornsilk;
+    box-shadow: 5px 10px 8px #272727b4;
+}
+
+.button:active {
+    background-color: darkgray;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
 
 footer {
     background-color: black;
