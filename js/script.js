@@ -64,3 +64,16 @@ function removeBlogBox(){
 }
 
 // Testkod för att spara det man redigerat
+let button = document.querySelectorAll("button");
+button.onclick = function (){
+    let editElem = document.getElementById("textBox"); // kanske behöver mer specifikt
+    let userEdited = editElem.innerHTML;
+
+    localStorage.userEdits = userEdited;
+}
+
+// Kolla om edits finns i locaStorage
+function checkEdits(){
+    if(localStorage.userEdits != null)
+    document.getElementById("textBox").innerHTML = localStorage.userEdits;
+}
