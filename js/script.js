@@ -2,6 +2,12 @@
     Jag har använt mig av console.log för att spåra och se till att mina variablar
     får just det värde jag vill att det ska få. Jag har följt vad som händer i 
     webbläsarens konsolfönster för att se att rätt värde sätts in i variabeln. 
+
+    Jag har också använt mig av "stepthrough" debugging i webbläsaren för att se 
+    vart det går snett när det har gått snett.
+
+    Min förebyggning av buggar är väl mest att jag har byggt allt steg för steg 
+    och kollat om det fungerar för varje steg med hjälp av bland annat console.log.
 */
 
 window.onload = function(){
