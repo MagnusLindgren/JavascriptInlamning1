@@ -7,29 +7,19 @@
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>    
 </head>
 
-<!--
-
-    TODO
-
-    * fixa header, input fält...
-
-    * lägg in några test blogginlägg
-
-      bara för att lösa CSS styling etc
-
--->
-
-<body onload="checkEdits()">
+<body onload="checkEdits()"> <!-- Kolla med localStorage om det finns sparade inlägg -->
     <header class="rowBox">
         <div>
             <h1>Zombie Blogg</h1>
         </div>
+    
         <div class="col">
             <label for="inputNumber">Nr of Posts</label>
             <input class="inputNr" id="inputNumber" type="number" min="0" placeholder="0">
         </div>
     </header>
     <main>
+        <!-- * Test för styling
         <section>
             <div class="textbox" id="edit">
             <h4>Detta är bara en testbox</h4>
@@ -37,6 +27,7 @@
                 Klicka på nummerräknaren för att justera hur många poster som ska finnas här. 
             </p>
         </section>
+        -->
     </main>
 
     <footer>&copy Magnus Lindgren</footer>
