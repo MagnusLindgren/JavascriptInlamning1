@@ -14,7 +14,7 @@
 /*
     Här har jag eventet onload som jag använder för att köra igång mina functioner.
     onload väntar med att köra tills allt på sidan är inladdat och klart innan det kör 
-    till skillnad mot  DOMContentLoaded som kör när DOM är färdigladdat. 
+    till skillnad mot DOMContentLoaded som kör när DOM är färdigladdat. 
 */
 window.onload = function(){
     document.getElementById("inputNumber").oninput = function(){
@@ -81,7 +81,7 @@ function createBlogBox(input){
     }
 }
 
-// Ta bort blogposter
+// Ta bort blogposter alla bloggposter med en loop. Hade jag haft mer tid skulle jag velat ha en parameter
 function removeBlogBox(){
     let sections = document.querySelectorAll("section");
     for (let i = 0; i < sections.length; i++){
@@ -90,6 +90,11 @@ function removeBlogBox(){
 }
 
 // Testkod för att spara det man redigerat
+/*
+    Jag har inte riktigt hunnit med att få det här att fungera som det ska men väljer att
+    ha kvar det här ändå. Sparknappen blev ju iaf grymt snygg. :)
+    Jag hade nog behövt lägga mer tid på att läsa om localstorage.
+*/
 let button = document.querySelectorAll("button");
 button.onclick = function (){
     let editElem = document.getElementById("textBox"); // kanske behöver mer specifikt

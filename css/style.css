@@ -54,6 +54,8 @@ header {
 }
 
 .button {
+    display: flex;
+    flex-direction: row;
     float: right;
     background-color: black;
     color: cornsilk;
@@ -74,3 +76,8 @@ footer {
     text-align: center;
 }
 
+@media only screen and (max-width: 600px) {
+    .button {
+        float: none;
+    }
+}
