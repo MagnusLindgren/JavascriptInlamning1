@@ -34,6 +34,9 @@ window.onload = function(){
 function makeEditable(box){
     box.onclick = function(){
         box.contentEditable = true;
+        /*
+            focus är en event som  gör så att elementet blir fokuserat när man har fokus på det (klickar på det)
+        */
         box.focus();
     }
 }
@@ -49,8 +52,8 @@ function createBlogBox(input){
 
         let button = document.createElement("button"); // Sparknapp
 
-        //Skriv ut temp text i boxen
-        title.innerText = "BlogPost " + (i+1);
+        //Skriv ut temp text i title och paragraph. Skriv ut text till save knappen
+        title.innerText = "BlogPost " + (i+1); // (i+1) eftersom den börjar med BlogPost 0 annars
         paragraph.innerText = "Write your text here.";
 
         button.innerText = "Save";
@@ -81,7 +84,11 @@ function createBlogBox(input){
     }
 }
 
-// Ta bort blogposter alla bloggposter med en loop. Hade jag haft mer tid skulle jag velat ha en parameter
+// Ta bort alla bloggposter med en loop. Hade jag haft mer tid skulle jag velat ha en parameter
+/*
+    Mer konkret så tar den bort alla sections. Den kollar hur många det finns och tar bort alla 
+    med hjälp av en loop som pågår tills det inte finns några sections kvar.
+*/
 function removeBlogBox(){
     let sections = document.querySelectorAll("section");
     for (let i = 0; i < sections.length; i++){
